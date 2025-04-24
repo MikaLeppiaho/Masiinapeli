@@ -46,7 +46,7 @@ function App() {
 						key={index}
 						className="dice"
 					>
-						{Array.from({ length: value }).map((_, i) => "•")}
+						{Array.from({ length: value }).map((_) => "•")}
 					</div>
 				))}
 			</div>
