@@ -33,9 +33,8 @@ function App() {
 
 	const handleAnswerClick = (answer: number) => {
 		setSelectedAnswer(answer);
-		if (answer === correctAnswer) {
-			setTimeout(() => generateQuestion(), 2000);
-		}
+		// Move on to a new question after 2 seconds regardless of correctness
+		setTimeout(() => generateQuestion(), 2000);
 	};
 
 	return (
