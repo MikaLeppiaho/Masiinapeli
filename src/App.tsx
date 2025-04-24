@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Die from "./Die";
 
 function App() {
 	const [dice, setDice] = useState<number[]>([]);
@@ -42,12 +43,10 @@ function App() {
 			<h1>Warmachine Dice Math Practice</h1>
 			<div className="dice-container">
 				{dice.map((value, index) => (
-					<div
+					<Die
 						key={index}
-						className="dice"
-					>
-						{Array.from({ length: value }).map((_) => "•")}
-					</div>
+						value={value}
+					/>
 				))}
 			</div>
 			<p>
